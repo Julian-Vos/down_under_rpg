@@ -1,0 +1,13 @@
+development:
+  adapter: postgresql
+  database: dorpg_dev
+  encoding: utf8
+  pool: 5
+  timeout: 5000
+  host: localhost
+  username:
+  password:
+
+production:
+  url:  <%= ENV['DATABASE_URL'] %>
+  pool: <%= ENV['RAILS_MAX_THREADS'] || 5 %>
