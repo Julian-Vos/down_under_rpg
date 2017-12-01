@@ -1,0 +1,68 @@
+body {
+  background-color: #404040;
+  color: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0 auto 50px;
+  max-width: 950px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid #666;
+  border-radius: 10px;
+  cursor: pointer;
+  font: inherit;
+  padding: 5px;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover, input[type='submit']:hover {
+  color: #999;
+  cursor: pointer;
+}
+
+input[type='submit'] {
+  background-color: #666;
+  color: inherit;
+  font: inherit;
+}
+
+input:not([type='submit']), select, textarea {
+  background-color: inherit;
+  border: 2px solid #666;
+  border-radius: 20px;
+  box-sizing: border-box;
+  color: inherit;
+  font: inherit;
+  margin-bottom: 20px;
+  padding: 5px 10px;
+  width: 100%;
+}
+
+input:not([type='submit']):focus, select:focus, textarea:focus {
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.left, .right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.align-right {
+  text-align: right;
+}

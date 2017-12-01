@@ -1,0 +1,25 @@
+.quest-buttons
+  button#all type='button'
+    = 'All'
+  button#plans type='button'
+    = 'Plans'
+  button#culture type='button'
+    = 'Culture'
+  button#nature type='button'
+    = 'Nature'
+  button#locations type='button'
+    = 'Locations'
+
+table
+  tbody
+    = render @quests
+
+- if @current_user
+  .quest-form
+    = form_tag quests_path do
+      = select_tag(:category, options_for_select(Quest::CATEGORIES), include_blank: true)
+      = text_field_tag(:description)
+      = number_field_tag(:experience)
+
+      .align-right
+        = submit_tag('Create')

@@ -1,0 +1,13 @@
+.navigation-bar
+  .navigation-button
+    = link_to 'Overview', root_path
+  .navigation-button
+    = link_to 'Posts', posts_path
+  .navigation-button
+    = link_to 'Quests', quests_path
+  .navigation-button
+    = link_to 'Photos', photos_path
+
+  .navigation-button.navigation-logo-right
+    = 'Julian '
+    img src=image_path('kangaroo_icon.png')

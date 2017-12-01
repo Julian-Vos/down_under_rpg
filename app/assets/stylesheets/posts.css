@@ -1,0 +1,70 @@
+.post {
+  border: 1px dashed #ccc;
+  padding: 25px;
+  text-align: justify;
+  white-space: pre-wrap;
+}
+
+.post > .date {
+  color: #999;
+  font-family: 'Courier New', monospace;
+  font-size: 80%;
+}
+
+.post > h2, .post h3 {
+  color: #33ccff;
+}
+
+.post > .related-photos {
+  margin-top: 50px;
+}
+
+.related-photos a {
+  text-decoration: none;
+}
+
+.comments-link {
+  border: 1px dashed #ccc;
+  border-top: none;
+  margin-bottom: 40px;
+  padding: 10px;
+  text-align: center;
+}
+
+.comments-link > a {
+  text-decoration: none;
+}
+
+.comments {
+  padding: 0 25px;
+  margin-top: 50px;
+}
+
+.comment > .left, .comment-form .left {
+  text-align: left;
+  width: 30%;
+}
+
+.comment > .right {
+  margin-left: 5%;
+  width: 65%;
+}
+
+.comment-form .right {
+  margin-left: calc(5% - 10px);
+  width: calc(65% + 10px);
+}
+
+.comment {
+  padding: 15px 0;
+  white-space: pre-wrap;
+}
+
+.comment:not(:first-child) {
+  border-top: 2px solid #666;
+}
+
+.comment-form {
+  padding: 0 15px;
+  margin-top: 25px;
+}

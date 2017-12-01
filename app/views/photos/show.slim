@@ -1,0 +1,29 @@
+- image_source = image_path('photos/' + @photo.filename + '.jpg')
+
+img.photo src=image_source
+
+.description
+  .left
+    = @photo.description
+    = ' ('
+    - if @photo.post
+      = link_to 'uploaded', @photo.post
+    - else
+      = 'uploaded'
+    = ' at '
+    = l(@photo.created_at.in_time_zone('Melbourne'), format: '%d/%m/%Y')
+    = ')'
+
+  .right
+    .controls
+      .left
+        - next_photo = @photo.next
+        - if next_photo
+          = link_to 'Next', next_photo
+
+      .right
+        - previous_photo = @photo.previous
+        - if previous_photo
+          = link_to 'Previous', previous_photo
+
+      = link_to 'Full resolution', image_source

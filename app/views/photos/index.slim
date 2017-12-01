@@ -1,0 +1,11 @@
+= render @photos
+
+- if @current_user
+  .photo-form
+    = form_tag photos_path do
+      = text_field_tag(:filename)
+      = text_area_tag(:description)
+      = number_field_tag(:post_id, nil, min: 1)
+
+      .align-right
+        = submit_tag('Create')

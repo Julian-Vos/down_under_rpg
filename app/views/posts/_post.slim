@@ -1,0 +1,9 @@
+.post
+  .date
+    = l(post.created_at.in_time_zone('Melbourne'), format: '%d/%m/%Y')
+  h2
+    = post.title
+  p
+    = post.content
+.comments-link
+  = link_to '(click here to view ' + post.comments.count.to_s + ' comments)', post

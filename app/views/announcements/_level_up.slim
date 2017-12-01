@@ -1,0 +1,12 @@
+.announcement
+  .left
+    .category
+      = 'LEVEL UP'
+
+    = 'Julian is now level '
+    = subject.statement
+    = '!'
+
+  .right
+    .date
+      = l(subject.created_at.in_time_zone('Melbourne'), format: '%d/%m/%Y')

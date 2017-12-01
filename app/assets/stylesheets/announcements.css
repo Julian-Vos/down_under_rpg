@@ -1,0 +1,73 @@
+.announcements > .left {
+  width: 25%;
+}
+
+.announcements > .right {
+  margin-left: 5%;
+  width: 70%;
+}
+
+.metric-key {
+  color: #999;
+  text-decoration: underline;
+}
+
+.experience-bar-outer {
+  border: 1px solid #999;
+}
+
+.experience-bar-inner {
+  background-color: #cc33ff;
+  font-size: 80%;
+  text-align: center;
+}
+
+.announcement {
+  border: 1px dashed #ccc;
+  font-size: 120%;
+  padding: 10px;
+}
+
+.announcement:not(:first-child) {
+  margin-top: 10px;
+}
+
+.announcement > .left {
+  width: 80%;
+}
+
+.announcement > .right {
+  text-align: right;
+  width: 20%;
+}
+
+.announcement .category, .announcement .date {
+  color: #999;
+  font-family: 'Courier New', monospace;
+  font-size: 70%;
+}
+
+.announcement .post-title {
+  color: #33ccff;
+  font-size: inherit;
+}
+
+.announcement .post-content {
+  font-size: 80%;
+}
+
+.announcement a {
+  text-decoration: none;
+}
+
+.announcement .experience-worth {
+  color: #999;
+}
+
+.announcement .experience-gained {
+  color: #cc33ff;
+}
+
+.extra-announcement-form {
+  margin-top: 50px;
+}

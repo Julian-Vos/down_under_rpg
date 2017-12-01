@@ -1,0 +1,28 @@
+.post
+  .date
+    = l(@post.created_at.in_time_zone('Melbourne'), format: '%d/%m/%Y')
+  h2
+    = @post.title
+  p
+    = @post.content
+  - if @photos.any?
+    .related-photos
+      h3
+        = 'Related photos'
+      - @photos.each do |photo|
+        div
+          = '- '
+          = link_to photo.filename, photo
+
+.comments
+  = render @comments
+
+.comment-form
+  = form_tag post_comments_path(@post) do
+    .left
+      = text_field_tag(:commenter, nil, placeholder: 'name')
+    .right
+      = text_area_tag(:content, nil, placeholder: 'comment', rows: 4)
+
+    .align-right
+      = submit_tag('Submit')

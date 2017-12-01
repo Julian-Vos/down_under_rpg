@@ -1,0 +1,44 @@
+.quest-buttons button {
+  color: inherit;
+  margin-bottom: 25px;
+  width: 16%;
+}
+
+.quest-buttons button:not(:first-child) {
+  margin-left: 5%;
+}
+
+.quest-buttons button:hover, .quest-buttons button:focus {
+  outline: 4px dotted #666;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  border: 1px solid #666;
+  padding: 5px;
+  text-align: center;
+}
+
+td.plans, button#plans {
+  background-color: blue;
+}
+
+td.culture, button#culture {
+  background-color: purple;
+}
+
+td.nature, button#nature {
+  background-color: green;
+}
+
+td.locations, button#locations  {
+  background-color: brown;
+}
+
+.quest-form {
+  margin-top: 50px;
+}

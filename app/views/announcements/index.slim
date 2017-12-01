@@ -1,0 +1,39 @@
+.announcements
+  .left
+    .metric-key
+      = 'Current location'
+    = @user.location
+    br
+    br
+    .metric-key
+      = 'Current temperature'
+    = @user.temperature
+    br
+    - if @current_user
+      br
+      = form_tag user_path(1), method: :patch do
+        = text_field_tag(:location)
+        = text_field_tag(:temperature)
+
+        .align-right
+          = submit_tag('Update')
+    br
+    .metric-key
+      = 'Current level'
+    = @user.level
+    .experience-bar-outer
+      - percentage = (@user.experience / @user.experience_goal) * 100
+      .experience-bar-inner style=('width: ' + percentage.to_s + '%;')
+        = @user.experience
+        = '/'
+        = @user.experience_goal.round
+
+  .right
+    = render @announcements
+    - if @current_user
+      .extra-announcement-form
+        = form_tag announcements_path do
+          = text_field_tag(:statement)
+
+          .align-right
+            = submit_tag('Create')

@@ -1,0 +1,23 @@
+.navigation-bar {
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 15px;
+  padding: 5px;
+  position: relative;
+}
+
+.navigation-button {
+  display: inline-block;
+  font-size: 150%;
+  padding: 10px;
+}
+
+.navigation-logo-right {
+  bottom: 5px;
+  position: absolute;
+  right: 5px;
+}
+
+.navigation-logo-right > img {
+  vertical-align: bottom;
+  width: 40px;
+}

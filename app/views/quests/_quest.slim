@@ -1,0 +1,12 @@
+tr data-category=quest.category
+  td.category-color class=quest.category
+  td
+    = quest.description
+  td
+    = quest.experience
+    = ' XP'
+  td
+    - if quest.completed
+      = '✓'
+    - elsif @current_user
+      = link_to 'complete', complete_quest_path(quest), method: :patch

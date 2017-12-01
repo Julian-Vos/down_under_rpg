@@ -1,0 +1,9 @@
+= render @posts
+
+- if @current_user
+  = form_tag posts_path do
+    = text_field_tag(:title)
+    = text_area_tag(:content, nil, rows: 6)
+
+    .align-right
+      = submit_tag('Create')

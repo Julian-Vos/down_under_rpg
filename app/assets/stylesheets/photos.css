@@ -1,0 +1,36 @@
+.thumbnail {
+  width: calc(50% - 10px);
+}
+
+.photo-link:nth-child(odd) {
+  margin-left: 20px;
+}
+
+.thumbnail:hover {
+  outline: 1px solid #ccc;
+}
+
+.photo-form {
+  margin-top: 50px;
+}
+
+.photo {
+  width: 100%;
+}
+
+.description > .left {
+  width: 75%;
+}
+
+.description > .right {
+  margin-left: 5%;
+  width: 20%;
+}
+
+.controls {
+  text-align: center;
+}
+
+.controls > .left, .controls > .right {
+  width: 50%;
+}
