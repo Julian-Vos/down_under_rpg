@@ -3,13 +3,13 @@
     .category
       = 'QUEST COMPLETED'
 
-    = subject.description
+    = announcement.subject.description
 
   .right
     .date
-      = l(subject.created_at.in_time_zone('Melbourne'), format: '%d/%m/%Y')
+      = l(announcement.created_at.in_time_zone('Melbourne'), format: '%d/%m/%Y')
 
     .experience-gained
       = '+ '
-      = subject.experience
+      = announcement.subject.experience
       = ' XP'

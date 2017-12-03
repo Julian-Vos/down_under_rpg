@@ -3,8 +3,8 @@
     .category
       = 'NEW PHOTO'
 
-    = link_to subject.filename, subject
+    = link_to announcement.subject.filename, announcement.subject
 
   .right
     .date
-      = l(subject.created_at.in_time_zone('Melbourne'), format: '%d/%m/%Y')
+      = l(announcement.created_at.in_time_zone('Melbourne'), format: '%d/%m/%Y')

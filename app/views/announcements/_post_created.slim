@@ -4,17 +4,17 @@
       = 'NEW POST'
 
     h2.post-title
-      = subject.title
+      = announcement.subject.title
     p.post-content
-      - if subject.content.length <= 100
-        = subject.content
+      - if announcement.subject.content.length <= 100
+        = announcement.subject.content
         = ' '
-        = link_to '(click here to comment)', post_path(subject)
+        = link_to '(click here to comment)', announcement.subject
       - else
-        = subject.content.chars.take(100).join
+        = announcement.subject.content.chars.take(100).join
         = '... '
-        = link_to '(click here to read on)', post_path(subject)
+        = link_to '(click here to read on)', announcement.subject
 
   .right
     .date
-      = l(subject.created_at.in_time_zone('Melbourne'), format: '%d/%m/%Y')
+      = l(announcement.created_at.in_time_zone('Melbourne'), format: '%d/%m/%Y')
