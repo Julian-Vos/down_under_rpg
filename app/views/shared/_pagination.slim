@@ -1,0 +1,16 @@
+- if @total > 10
+  .pagination
+    .pagination-center
+      - if @page > 0
+        a.pagination-button.pagination-button-prev href=url_for(page: @page - 1)
+          = '<'
+
+      = @page * 10 + 1
+      = '-'
+      = @page * 10 + 10
+      = ' of '
+      = @total
+
+      - if @page * 10 + 10 < @total
+        a.pagination-button.pagination-button-next href=url_for(page: @page + 1)
+          = '>'

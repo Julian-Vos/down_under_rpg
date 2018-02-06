@@ -1,6 +1,9 @@
 class PhotosController < ApplicationController
   def index
-    @photos = Photo.order(created_at: :desc)
+    @page = params[:page].to_i
+    @total = Photo.count
+
+    @photos = paginate(Photo.order(created_at: :desc), @page)
   end
 
   def show

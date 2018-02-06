@@ -1,0 +1,31 @@
+.pagination {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.pagination-center {
+  border: 1px #666 solid;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 5px;
+  position: relative;
+}
+
+.pagination-button {
+  border: inherit;
+  border-radius: inherit;
+  padding: inherit;
+  position: absolute;
+  text-decoration: none;
+  top: -1px;
+}
+
+.pagination-button-prev {
+  margin-right: 10px;
+  left: -40px;
+}
+
+.pagination-button-next {
+  margin-left: 10px;
+  right: -40px;
+}

@@ -1,6 +1,9 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.order(created_at: :desc)
+    @page = params[:page].to_i
+    @total = Post.count
+
+    @posts = paginate(Post.order(created_at: :desc), @page)
   end
 
   def show

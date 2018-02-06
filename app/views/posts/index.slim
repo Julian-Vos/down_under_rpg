@@ -1,5 +1,7 @@
 = render @posts
 
+= render 'shared/pagination'
+
 - if @current_user
   = form_tag posts_path do
     = text_field_tag(:title)

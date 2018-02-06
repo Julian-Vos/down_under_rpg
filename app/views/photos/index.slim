@@ -1,4 +1,7 @@
-= render @photos
+div
+  = render @photos
+
+= render 'shared/pagination'
 
 - if @current_user
   .photo-form

@@ -2,7 +2,10 @@ class AnnouncementsController < ApplicationController
   def index
     @user = User.find(1)
 
-    @announcements = Announcement.order(created_at: :desc)
+    @page = params[:page].to_i
+    @total = Announcement.count
+
+    @announcements = paginate(Announcement.order(created_at: :desc), @page)
   end
 
   def create

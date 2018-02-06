@@ -30,6 +30,7 @@
 
   .right
     = render @announcements
+    = render 'shared/pagination'
     - if @current_user
       .extra-announcement-form
         = form_tag announcements_path do

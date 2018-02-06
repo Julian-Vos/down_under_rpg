@@ -2,7 +2,7 @@
   width: calc(50% - 10px);
 }
 
-.photo-link:nth-child(odd) {
+.photo-link:nth-child(even) {
   margin-left: 20px;
 }
 
