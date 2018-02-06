@@ -12,7 +12,7 @@
       - @photos.each do |photo|
         div
           = '- '
-          = link_to photo.filename, photo
+          = link_to photo.filename[5..-1], photo
 
 .comments
   = render @comments

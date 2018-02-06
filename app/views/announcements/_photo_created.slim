@@ -3,7 +3,7 @@
     .category
       = 'NEW PHOTO'
 
-    = link_to announcement.subject.filename, announcement.subject
+    = link_to announcement.subject.filename[5..-1], announcement.subject
 
   .right
     .date
