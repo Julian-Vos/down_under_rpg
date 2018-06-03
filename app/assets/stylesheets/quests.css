@@ -42,3 +42,14 @@ td.locations, button#locations  {
 .quest-form {
   margin-top: 50px;
 }
+
+h3.seal-of-approval {
+  color: #66ff33;
+  text-align: center;
+}
+
+img.seal-of-approval {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+}

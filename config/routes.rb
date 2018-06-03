@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   resources :quests, only: [:index, :create] do
     patch :complete, on: :member
+    get :seal, on: :collection
   end
 
   resources :sessions, only: [:new, :create, :destroy]

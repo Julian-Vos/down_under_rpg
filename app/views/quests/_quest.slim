@@ -7,6 +7,7 @@ tr data-category=quest.category
     = ' XP'
   td
     - if quest.completed
-      = '✓'
+      = link_to seal_quests_path do
+        = '✓'
     - elsif @current_user
       = link_to 'complete', complete_quest_path(quest), method: :patch
