@@ -34,6 +34,7 @@ a:hover, input[type='submit']:hover {
 
 input[type='submit'] {
   background-color: #666;
+  border-radius: 10px;
   color: inherit;
   font: inherit;
 }
